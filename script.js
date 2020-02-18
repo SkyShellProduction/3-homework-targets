@@ -114,27 +114,75 @@
 // else{
 //     alert('Среднее: ' + c);
 // }
-let a = +prompt('Введите число: ');
-let num = a;
-let b = +prompt('Введите степень: ');
-let i = 1;
-while (i<b){
-    a = a * num;
-    i++;
-}
-alert(a);
+// let a = +prompt('Введите число: ');
+// let num = a;
+// let b = +prompt('Введите степень: ');
+// let i = 1;
+// while (i<b){
+//     a = a * num;
+//     i++;
+// }
+// alert(a);
 
 
-let rung = +prompt('Введите количество ступенек: ');
-let rungType = prompt('Введите символы отступов: ');
-let r = rungType;
-let finalValue = prompt('Введите конечный символ: ');
+// let rung = +prompt('Введите количество ступенек: ');
+// let rungType = prompt('Введите символы отступов: ');
+// let finalValue = prompt('Введите конечный символ: ');
 
-for (let i = 1; i<=rung; i++){
-    let str = rungType.slice(0, -1) + finalValue;
-    console.log(str);
-    rungType +=r;
+// for (let i = 0; i<rung; i++){
+//     if (i == 0) console.log(finalValue);
+//     else{
+//         finalValue = rungType + finalValue;
+//         console.log(finalValue);
+//     }
+// }
     
+// }
+function age(e, f, g){
+    let result = e + ', Ваш возраст: ' + (f - g);
+    return result;
 }
+let = userName = prompt('Введите ваше имя: ');
+let = thisYear = +prompt('Введите текущий год: ');
+let = userYear = +prompt('Введите год рождения: ');
+console.log(age(userName, thisYear, userYear));
 
+
+function minMaxRandom(a, b){
+    return Math.floor(Math.random() *(max - min +1) + min);
+}
+let count = +prompt('Введите число примеров: ');
+let min = +prompt('Введите число отсчета: ');
+let max = +prompt('Введите число остановки отсчета: ');
+let arr = ['+', '-', '*', '/'];
+let r = 0;
+let w = 0;
+for (let i = 0; i<count; i++){
+    let num1 = minMaxRandom(min, max);
+    let num2 = minMaxRandom(min, max);
+    let rand = Math.floor(Math.random()*arr.length);
+    let ans = prompt('Решите ' + num1 + arr[rand] +num2 + '=?');
+    if (ans == num1+num2) {
+    alert('Right');
+    r++
+    }
+    else if(ans == num1*num2){
+        alert('Right');
+        r++;
+    }
+    else if(ans == num1/num2){
+        alert('Right');
+        r++;
+    }
+    else if(ans == num1-num2){
+        alert('Right');
+        r++;
+    }
+    else {
+    alert('Wrong');
+    w++;
+    }
+}
+alert('Количество правильных ответов: ' + r);
+alert('Количество неправильных ответов: ' + w);
 
